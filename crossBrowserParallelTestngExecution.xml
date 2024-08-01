@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Practice Suite" parallel="tests" thread-count="3">
+
+    <listeners>
+        <listener class-name="utilities.ExtendReportUtility" />
+    </listeners>
+
+    <test name="For parabank page [chrome]">
+        <parameter name="os" value="Windows"/>
+        <parameter name="browser" value="chrome"/>
+        <parameter name="url" value="https://parabank.parasoft.com/parabank/index.htm"/>
+        <classes>
+            <class name="testCases.TC001_UserRegistrationTest"/>
+        </classes>
+    </test> <!-- Test -->
+
+    <test name="For demowf page [edge]">
+        <parameter name="os" value="Windows"/>
+        <parameter name="browser" value="edge"/>
+        <parameter name="url" value="https://parabank.parasoft.com/parabank/index.htm"/>
+        <classes>
+            <class name="testCases.TC002_LinksValidationTest"/>
+        </classes>
+    </test> <!-- Test -->
+
+      <test name="For demowf page [firefox]">
+          <parameter name="os" value="Windows"/>
+          <parameter name="browser" value="firefox"/>
+          <parameter name="url" value="https://www.demowf.aspnetawesome.com/"/>
+        <classes>
+           <class name="testCases.TC003_PFDDinnerRegistrationTest"/>
+        </classes>
+      </test> <!-- Test -->
+
+</suite> <!-- Suite -->
