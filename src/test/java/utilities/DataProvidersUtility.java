@@ -1,7 +1,7 @@
 package utilities;
 
 import java.io.IOException;
-import web.controllers.FilesController;
+import Utilities.FilesReader;
 import org.testng.annotations.DataProvider;
 
 public class DataProvidersUtility {
@@ -10,7 +10,7 @@ public class DataProvidersUtility {
     {
         String path=".\\testData\\createAccountData.xlsx";//taking xl file from testData
 
-        FilesController fc =new FilesController(path);//creating an object for XLUtility
+        FilesReader fc =new FilesReader(path);//creating an object for XLUtility
 
         int totalrows = fc.getRowCount("Sheet1");
         int totalcols = fc.getCellCount("Sheet1",1);

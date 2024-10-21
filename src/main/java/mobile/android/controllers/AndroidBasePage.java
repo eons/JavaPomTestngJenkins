@@ -1,22 +1,20 @@
-package web.controllers;
+package mobile.android.controllers;
 
-import org.json.simple.parser.ParseException;
+import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementNotInteractableException;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.*;
-import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
 
 
-public class BasePageController {
+public class AndroidBasePage {
 
-    public WebDriver driver;
+    public AndroidDriver driver;
 
-    public BasePageController(WebDriver driver){
+    public AndroidBasePage(AndroidDriver driver){
         this.driver = driver;
         PageFactory.initElements(driver,this);
     }
@@ -39,7 +37,7 @@ public class BasePageController {
 
     public void explicitFluentWaitTest(int secsTimeout,int pollingTime, By element){
         WebElement revealedElement = _findElement(element);
-        Wait<WebDriver> wait =
+        Wait<AndroidDriver> wait =
                 new FluentWait<>(driver)
                         .withTimeout(Duration.ofSeconds(secsTimeout))
                         .pollingEvery(Duration.ofMillis(pollingTime))

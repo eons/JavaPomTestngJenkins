@@ -1,4 +1,4 @@
-package web.controllers;
+package Utilities;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -17,9 +17,9 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class FilesController {
+public class FilesReader {
 
-    public FilesController(String path)
+    public FilesReader(String path)
     {
         this.path=path;
     }
@@ -33,7 +33,7 @@ public class FilesController {
     public CellStyle style;
     String path;
 
-    public String readJsonFile(String filePath, String atrtinbute) throws IOException, ParseException {
+    public static String readJsonFile(String filePath, String atrtinbute) throws IOException, ParseException {
         JSONParser jsonParser = new JSONParser();
         FileReader reader = new FileReader(filePath);
         JSONObject jsonObject = (JSONObject) jsonParser.parse(reader);

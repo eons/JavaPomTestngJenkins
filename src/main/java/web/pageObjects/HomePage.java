@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import Utilities.FilesReader;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -87,7 +88,7 @@ public class HomePage extends BasePageController {
          */
         for(String element : nameList.subList(1, 5)){
             String currentUrl = "";
-            String expectedUrl = _readJsonFile(".\\testData\\expected_urls.json", element);
+            String expectedUrl = FilesReader.readJsonFile(".\\testData\\expected_urls.json", element);
             By locator = By.xpath(String.format("//a[contains(text(), '%s')]", element));
             if(element.equals("Products") || element.equals("Locations")){
                 currentUrl = openLinkInNewTab(locator, element);
