@@ -1,7 +1,7 @@
 package utilities;
 
 import java.io.IOException;
-import controllers.FilesController;
+import web.controllers.FilesController;
 import org.testng.annotations.DataProvider;
 
 public class DataProvidersUtility {

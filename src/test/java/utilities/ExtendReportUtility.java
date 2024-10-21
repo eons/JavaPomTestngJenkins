@@ -11,10 +11,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-import baseTC.BaseTC;
-import org.apache.commons.mail.DefaultAuthenticator;
-import org.apache.commons.mail.ImageHtmlEmail;
-import org.apache.commons.mail.resolver.DataSourceUrlResolver;
+import web.baseTC.BaseTC;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;

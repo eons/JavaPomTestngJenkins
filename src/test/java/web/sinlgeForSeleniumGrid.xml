@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Practice Suite">
+
+    <listeners>
+        <listener class-name="utilities.ExtendReportUtility" />
+    </listeners>
+
+    <test name="For parabank page">
+        <parameter name="os" value="Windows"/>
+        <parameter name="browser" value="Chrome"/>
+        <classes>
+            <!--            <class name="web.testCases.TC001_UserRegistrationTest"/>-->
+            <class name="web.testCases.TC005_LoginValidationDDTest"/>
+        </classes>
+    </test> <!-- Test -->
+
+</suite> <!-- Suite -->
